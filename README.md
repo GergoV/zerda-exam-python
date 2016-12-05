@@ -30,5 +30,12 @@ The application is accepted if:
 ### How can you create a graphical user interface and draw a rectangle on it in python? What are the tools needed for it? [2p]
 #### Your answer:
 
+Python has various libraries for graphics. Tkinter is one of them: it may need additional packages such as PIL (supposedly deprecated) and Pillow (open source alternative of PIL).
+
+To create simple graphics, tkinter has to be imported.
+You create a window by instantiating one, usually named 'root', with a Tk() class. You can draw on it after creating a tkinter canvas. Tkinter has its own rectangle function for drawing the shape.
+
 ### What does V stand for in MVC? [2p]
 #### Your answer:
+
+View. The component of the program that is responsible for displaying the software's output and the user interface.
