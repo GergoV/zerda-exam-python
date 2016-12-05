@@ -27,7 +27,7 @@ The application is accepted if:
 ### Explain the algorithm seen in `third.py`. Use a flowchart, structogram or pseudo code. [2p]
 #### Your answer:
 
-The function counts occurence of a given letter in a string.
+The function counts how many times a given letter is present in a string.
 
 Function gets a string and a letter as input.
   Checks if string is a string.

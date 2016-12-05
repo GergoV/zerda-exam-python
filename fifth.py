@@ -21,6 +21,10 @@
 
 ################################################
 
+# The following code should work with the class:
+
+from fourth import Rocket
+
 class SpaceX():
 
     def __init__(self, fuel_stored):
@@ -34,26 +38,18 @@ class SpaceX():
 
     def refill_all(self):
         for i in self.rockets:
-            i.refill()
-            fuel_used = i.refill()
-            self.fuel_stored -= fuel_used
+            self.fuel_stored -= i.refill()
 
     def launch_all(self):
         for i in self.rockets:
             i.launch()
+            self.program_launches += 1
 
     def buy_fuel(self, amount):
         self.fuel_stored += amount
 
     def getStats(self):
         return 'rockets: {}, fuel: {}, launches: {}'.format(len(self.rockets), self.fuel_stored, self.program_launches)
-
-
-# The following code should work with the class:
-
-from fourth import Rocket
-
-# class implementation goes here
 
 space_x = SpaceX(100)
 falcon1 = Rocket('falcon1', 0, 0)

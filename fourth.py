@@ -43,7 +43,8 @@ class Rocket():
     def getStats(self):
         return 'name: {}, fuel: {}, launches: {}'.format(self.rocket_type, self.fuel_level, self.launches_count)
 
-# Houston:
+'''
+# NOTE: Code commented out since this file acts as module for fifth.py and shouldn't run.
 
 falcon1 = Rocket('falcon1')
 returned_falcon9 = Rocket('falcon9', 11, 1)
@@ -53,3 +54,4 @@ falcon1.launch()
 
 print(falcon1.getStats()) # name: falcon1, fuel: 4, launches: 1
 print(returned_falcon9.getStats()) # name: falcon9, fuel: 11, launches: 1
+'''
