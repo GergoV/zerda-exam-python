@@ -27,20 +27,7 @@ The application is accepted if:
 ### Explain the algorithm seen in `third.py`. Use a flowchart, structogram or pseudo code. [2p]
 #### Your answer:
 
-The function counts how many times a given letter is present in a string.
-
-Function gets a string and a letter as input.
-  Checks if string is a string.
-  If no: returns 0.
-
-  If yes: proceeds.
-
-  Sets a counter to 0.
-  Iterates letters of string.
-  Checks if current letter is letter it is looking for.
-    If so, adds 1 to counter.
-
-  Returns counter.
+See Python_exam_flowchart.png included.
 
 ### How can you create a graphical user interface and draw a rectangle on it in python? What are the tools needed for it? [2p]
 #### Your answer:
