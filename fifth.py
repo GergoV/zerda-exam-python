@@ -21,6 +21,34 @@
 
 ################################################
 
+class SpaceX():
+
+    def __init__(self, fuel_stored):
+        self.fuel_stored = fuel_stored
+        self.rockets = []
+        self.program_launches = 0
+
+    def addRocket(self, rocket):
+        self.rockets.append(rocket)
+        self.program_launches += rocket.launches_count # Not nicely encapsulated.
+
+    def refill_all(self):
+        for i in self.rockets:
+            i.refill()
+            fuel_used = i.refill()
+            self.fuel_stored -= fuel_used
+
+    def launch_all(self):
+        for i in self.rockets:
+            i.launch()
+
+    def buy_fuel(self, amount):
+        self.fuel_stored += amount
+
+    def getStats(self):
+        return 'rockets: {}, fuel: {}, launches: {}'.format(len(self.rockets), self.fuel_stored, self.program_launches)
+
+
 # The following code should work with the class:
 
 from fourth import Rocket

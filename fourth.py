@@ -43,6 +43,7 @@ class Rocket():
     def getStats(self):
         return 'name: {}, fuel: {}, launches: {}'.format(self.rocket_type, self.fuel_level, self.launches_count)
 
+# Houston:
 
 falcon1 = Rocket('falcon1')
 returned_falcon9 = Rocket('falcon9', 11, 1)
