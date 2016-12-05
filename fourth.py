@@ -23,12 +23,18 @@
 class Rocket():
 
     def __init__(self, rocket_type='', fuel_level=0, launches_count=0):
+
+        valid_rocket_types = ['falcon1', 'falcon9']
+        if rocket_type not in valid_rocket_types:
+            raise ValueError('Invalid rocket type.')
+
         self.rocket_type = rocket_type
         self.fuel_level = fuel_level
         self.launches_count = launches_count
 
         self.launch_fuel = {'falcon1': 1, 'falcon9': 9}
         self.refill_levels = {'falcon1': 5, 'falcon9': 20}
+
 
     def launch(self):
         self.fuel_level -= self.launch_fuel[self.rocket_type]
@@ -43,15 +49,15 @@ class Rocket():
     def getStats(self):
         return 'name: {}, fuel: {}, launches: {}'.format(self.rocket_type, self.fuel_level, self.launches_count)
 
-'''
-# NOTE: Code commented out since this file acts as module for fifth.py and shouldn't run.
 
-falcon1 = Rocket('falcon1')
-returned_falcon9 = Rocket('falcon9', 11, 1)
-
-falcon1.refill() # 5
-falcon1.launch()
-
-print(falcon1.getStats()) # name: falcon1, fuel: 4, launches: 1
-print(returned_falcon9.getStats()) # name: falcon9, fuel: 11, launches: 1
-'''
+###############################################################################################
+# NOTE: Test Code commented out since this file acts as module for fifth.py and shouldn't run.
+#
+#falcon1 = Rocket('falcon1')
+#returned_falcon9 = Rocket('falcon9', 11, 1)
+#
+#falcon1.refill() # 5
+#falcon1.launch()
+#
+#print(falcon1.getStats()) # name: falcon1, fuel: 4, launches: 1
+#print(returned_falcon9.getStats()) # name: falcon9, fuel: 11, launches: 1
