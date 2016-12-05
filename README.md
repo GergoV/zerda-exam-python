@@ -29,13 +29,37 @@ The application is accepted if:
 
 See Python_exam_flowchart.png included.
 
+(In brief:
+  - Get a string and a letter as input
+  - Check if string is really a string, if no: return 0
+  - Set a counter to 0;
+  - Iterate letters of string
+  - Check if current letter is letter we're looking for; if so, increase counter;
+  - Return count of occurences.)
+
 ### How can you create a graphical user interface and draw a rectangle on it in python? What are the tools needed for it? [2p]
 #### Your answer:
 
-Python has various libraries for graphics. Tkinter is one of them: it may need additional packages such as PIL (supposedly deprecated) and Pillow (open source alternative of PIL).
+Python has various modules for graphics. Tkinter is a basic one suitable for this task.
 
-To create simple graphics, tkinter has to be imported.
-You create a window by instantiating one, usually named 'root', with a Tk() class. You can draw on it after creating a tkinter canvas. Tkinter has its own rectangle function for drawing the shape.
+Tkinter module has to be installed alongside python to be able to work.
+
+To create simple graphics, tkinter module has to be imported. You need to set up a windows object (Tk()), then create a canvas widget and draw a rectangle on canvas widget with proper tkinter function.
+
+Finally, all has to be put in the main loop to be displayed in the window.
+
+Example use:
+
+from tkinter import * # import tkinter
+
+root = Tk() # instantiate window
+
+canvas = Canvas(root, width=200, height=100) # set up canvas with given width, heigt
+canvas.pack() # pack canvas
+
+canvas.create_rectangle(50, 25, 150, 75, fill="blue") # create rectangle, coordinates are corners
+
+mainloop() # display all by putting canvas in main loop
 
 ### What does V stand for in MVC? [2p]
 #### Your answer:
