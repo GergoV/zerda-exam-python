@@ -59,7 +59,7 @@ canvas.pack() # pack canvas
 
 canvas.create_rectangle(50, 25, 150, 75, fill="blue") # create rectangle, coordinates are corners
 
-mainloop() # display all by putting canvas in main loop
+mainloop() # display all by putting in main loop
 
 ### What does V stand for in MVC? [2p]
 #### Your answer:
